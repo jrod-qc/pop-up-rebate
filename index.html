@@ -6,78 +6,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rebate Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
 </head>
 
 <body>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-        }
-        
-        .rebate-modal-popup-container {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.701);
-            margin: 0;
-            padding: 0;
-        }
-        
-        .rebate-modal-popup-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 1440px;
-            height: 100vh;
-            border: 1px solid red;
-            margin: 0 auto;
-        }
-        
-        .rebate-modal-popup-box {
-            width: 100%;
-            max-width: 600px;
-            height: 75vh;
-            background-color: #fff;
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
-        }
-    </style>
-    <!-- This is the Rebate Modal -->
-    <div class="rebate-modal-popup-container">
-        <div class="rebate-modal-popup-wrapper">
-            <div class="rebate-modal-popup-box">
-                <div class="rebate-modal-popup-exit-btn-container">
-                    <div class="rebate-modal-popup-exit-btn-box">
-                        <i class="fas fa-times"></i>
-                    </div>
+    <div class="selectAnOption">
+        <h2>These are a selection of rebate designs. </h2>
+        <select name="" id="optionSelector" class="rebateSelector" onchange="rebateOption()">
+            <option value=" ">Please Select Your Rebate Option</option>
+            <option value="optionOne">Option One</option>
+            <option value="optionTwo">Option Two</option>
+            <option value="optionThree">Option Three</option>
+        </select>
+    </div>
+    <div class="optionOne">
+        <!-- This is the Rebate Modal -->
+        <div class="rebate-modal-popup-container">
+            <div class="rebate-modal-popup-wrapper">
+                <!-- This is the Main Modal Container box -->
+                <div class="rebate-modal-popup-box">
+                    <!-- This is the Main Content Text -->
                     <div class="rebate-modal-popup-main-content">
+                        <!-- This is the Exit Btn -->
+                        <div class="rebate-modal-popup-exit-btn-box">
+                            <i class="fas fa-times"></i>
+                        </div>
                         <div class="rebate-modal-title">
-                            <h2>Title</h2>
+                            <h1 class="rebate-main-title">Receive up to</h1>
                         </div>
                         <div class="rebate-main-content-text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem incidunt eum facilis asperiores in et minima enim cumque quia sed excepturi perferendis quos praesentium deserunt a quibusdam, provident cupiditate? Aspernatur.</p>
+                            <h1 class="rebate-dollar-amount">$300</h1>
+                            <h2 class="rebate-subtext">Instant Manufacturer Rebate Today!</h2>
+                            <p>*Rebate Applied before Install.</p>
+
                         </div>
                         <div class="rebate-btn-container">
                             <div class="rebate-btn">
                                 <a href="javascript:void(0);">Request Consultation</a>
                             </div>
                         </div>
+                    </div>
+                    <!-- This is the Form Section -->
+                    <div class="rebate-modal-form-container">
+                        <!-- This is the Exit Btn -->
+                        <div class="rebate-form-popup-exit-btn-box">
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <form action="" method="post">
+                            <input type="text" name="First Name" id="" placeholder="First Name">
+                            <input type="text" name="Last Name" id="" placeholder="Last Name">
+                            <input type="tel" name="Phone Number" id="" placeholder="Phone Number #">
+                            <input type="email" name="Email" id="" placeholder="Email">
+                            <input class="rebate-request-btn" type="button" value="Submit">
+                            <div class="rebate-form-links">
+                                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                            </div>
+                        </form>
 
                     </div>
                 </div>
+
+            </div>
+        </div>
+        <!-- This is the Modal Minimized  -->
+        <div class="rebate-modal-minimized-container">
+            <div class="rebate-modal-minimized-btn">
+                <a href="javascript:void(0);">View Rebate Specials (Click Here)</a>
             </div>
         </div>
     </div>
 
-    <!-- This is the Modal Minimized  -->
-    <div class="rebate-modal-minimized-container">
-        <div class="rebate-modal-minimized-btn">
-            <a href="javascript:void(0);">View Rebate Specials (Click Here)</a>
+    <div class="optionTwo">
+        <!-- This is the Rebate Modal -->
+        <div class="rebate-modal-popup-container-2">
+            <div class="rebate-modal-popup-wrapper-2">
+                <!-- This is the Main Modal Container box -->
+                <div class="rebate-modal-popup-box-2">
+                    <!-- This is the Main Content Text -->
+                    <div class="rebate-modal-popup-main-content-2">
+
+                        <div class="rebate-modal-left-side-2">
+
+                        </div>
+                        <div class="rebate-modal-right-side-2">
+                            <!-- This is the Exit Btn -->
+                            <div class="rebate-modal-popup-exit-btn-box-2">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <!-- This is the main text Content -->
+                            <div class="rebate-modal-title-2">
+                                <h1 class="rebate-main-title-2">Receive up to</h1>
+                            </div>
+                            <div class="rebate-main-content-text-2">
+                                <h1 class="rebate-dollar-amount-2">$300</h1>
+                                <h2 class="rebate-subtext-2">Instant Manufacturer Rebate Today!</h2>
+                                <p>*Rebate Applied before Install.</p>
+
+                            </div>
+                            <div class="rebate-btn-container-2">
+                                <div class="rebate-btn-2">
+                                    <a href="javascript:void(0);">Request Consultation</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- This is the Form Section -->
+                        <div class="rebate-modal-form-container-2">
+                            <!-- This is the Exit Btn -->
+                            <div class="rebate-form-popup-exit-btn-box-2">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <form action="" method="post">
+                                <input type="text" name="First Name" id="" placeholder="First Name">
+                                <input type="text" name="Last Name" id="" placeholder="Last Name">
+                                <input type="tel" name="Phone Number" id="" placeholder="Phone Number #">
+                                <input type="email" name="Email" id="" placeholder="Email">
+                                <input class="rebate-request-btn-2" type="button" value="Submit">
+                                <div class="rebate-form-links-2">
+                                    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- This is the Modal Minimized  -->
+        <div class="rebate-modal-minimized-container-2">
+            <div class="rebate-modal-minimized-btn-2">
+                <a href="javascript:void(0);">View Rebate Specials (Click Here)</a>
+            </div>
         </div>
     </div>
+
+    <div class="optionThree">
+        <!-- This is the Rebate Modal -->
+        <div class="rebate-modal-popup-container-3">
+            <div class="rebate-modal-popup-wrapper-3">
+                <!-- This is the Main Modal Container box -->
+                <div class="rebate-modal-popup-box-3">
+                    <!-- This is the Main Content Text -->
+                    <div class="rebate-modal-popup-main-content-3">
+
+                        <div class="rebate-modal-left-side-3">
+
+                        </div>
+                        <div class="rebate-modal-right-side-3">
+                            <!-- This is the Exit Btn -->
+                            <div class="rebate-modal-popup-exit-btn-box-3">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <!-- This is the main text Content -->
+                            <div class="rebate-modal-title-3">
+                                <h1 class="rebate-main-title-3">Receive up to</h1>
+                            </div>
+                            <div class="rebate-main-content-text-3">
+                                <h1 class="rebate-dollar-amount-3">$300</h1>
+                                <h2 class="rebate-subtext-3">Instant Manufacturer Rebate Today!</h2>
+                                <p>*Rebate Applied before Install.</p>
+
+                            </div>
+                            <div class="rebate-btn-container-3">
+                                <div class="rebate-btn-3">
+                                    <a href="javascript:void(0);">Request Consultation</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- This is the Form Section -->
+                        <div class="rebate-modal-form-container-3">
+                            <!-- This is the Exit Btn -->
+                            <div class="rebate-form-popup-exit-btn-box-3">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <form action="" method="post">
+                                <input type="text" name="First Name" id="" placeholder="First Name">
+                                <input type="text" name="Last Name" id="" placeholder="Last Name">
+                                <input type="tel" name="Phone Number" id="" placeholder="Phone Number #">
+                                <input type="email" name="Email" id="" placeholder="Email">
+                                <input class="rebate-request-btn-3" type="button" value="Submit">
+                                <div class="rebate-form-links-3">
+                                    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- This is the Modal Minimized  -->
+        <div class="rebate-modal-minimized-container-2">
+            <div class="rebate-modal-minimized-btn-2">
+                <a href="javascript:void(0);">View Rebate Specials (Click Here)</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
